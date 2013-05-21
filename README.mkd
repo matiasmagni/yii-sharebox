@@ -75,7 +75,8 @@ Note: the company logos in the icons are copyright of their respective owners.
 * [Extension Page](http://www.yiiframework.com/extension/sharebox)
 
 ##Change Log
-
+* v 1.4 — 2013-21-13 :
+  * Add support for the dynamicRes extension.
 * v 1.3 — 2012-09-27 :
   * Add the animate option.
   * CSS fixes and cleanup.
