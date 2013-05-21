@@ -134,7 +134,11 @@ class EShareBox extends CWidget
 		if (!$this->url || !$this->title) {
 			throw new CException('Could not initialize ShareBox : "title" and "url" parameters are required.');
 		}
-		$assets = Yii::app()->getAssetManager()->publish(dirname(__FILE__) . '/assets');
+		if (isset(Yii::app()->dynamicRes)) {
+			Yii::app()->dynamicRes->registerCssFile($assets . '/style.css');
+		} else {
+			Yii::app()->clientScript->registerCssFile($assets . '/style.css');
+		}
 		Yii::app()->clientScript->registerCssFile($assets . '/style.css');
 		if (!$this->iconPath) {
 			$this->iconPath = $assets . '/images';
